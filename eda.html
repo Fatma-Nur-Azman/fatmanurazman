@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<!--
+    Helios by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>EDA - Fatma Nur Azman</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .name-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .name-container span {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        .name-container img {
+            margin: 0 10px;
+            max-width: 50px;
+            height: auto;
+        }
+        .button.circled {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e44c65;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .button.circled img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .gallery a {
+            position: relative;
+            display: block;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: opacity 0.3s ease;
+        }
+        .gallery a:hover img {
+            color: black;
+            opacity: 0.3;
+        }
+        .gallery .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: rgb(36, 35, 35);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .gallery a:hover .overlay {
+            opacity: 1;
+        }
+        .gallery .overlay h2,
+        .gallery .overlay p {
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .inner header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header">
+            <div class="inner">
+                <header>
+                    <h1><a href="index.html" id="logo">Fatma Nur Azman</a></h1>
+                    <hr />
+                    <p>Data Scientist & Data Analyst & Business Analyst</p>
+                </header>
+            </div>
+ <!-- Nav -->
+ <nav id="nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+            <a href="#">Portfolio</a>
+            <ul>
+                <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li> <!-- Bu satır düzeltildi -->
+                <li><a href="#">Machine Learning</a></li>
+                <li><a href="Data_Visualization.html">Data Visualization</a></li>
+            </ul>
+        </li>
+        <li><a href="https://medium.com/@azmanfnur" target="_blank">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+</div>
+
+
+        <!-- Main Content -->
+        <section id="main">
+            <div class="inner">
+                <header>
+                    <h3>A glimpse of the projects I've been working on</h3>
+                </header>
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_01_B%C4%B0KE_DEMAND_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_DS4_BİKE_DEMAND.jpeg" alt="EDA Image 1">
+                            <div class="overlay">
+                                <h2>BİKE DEMAND ANALYSIS</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>This project study was carried out to analyze the demand for bicycle rental and to make demand forecasts.</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_02_STARTUP_FUNDING_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_STARTUP_FUNDING.jpg" alt="EDA Image 2">
+                            <div class="overlay">
+                                <h2>STARTUP FUNDING</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>EDA project work was carried out to analyze and forecast entrepreneurship and startup financing.</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_03_HUMAN_RESOURCES_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_HUMAN_RESOURCES.jpg" alt="EDA Image 3">
+                            <div class="overlay">
+                                <h2>HUMAN RESOURCES</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>EDA project work has been carried out in the field of human resources to analyze the factors affecting turnover from a company and to make analysis and forecasts.</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_03_KYPHOSIS_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_KYPHOSIS.jpg" alt="EDA Image 4">
+                            <div class="overlay">
+                                <h2>KYPHOSIS DISEASE</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>In the field of health, EDA project work has been carried out to analyze and predict the Kyphosis disease.</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_03_CANSER_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_CANSER.jpg" alt="EDA Image 5">
+                            <div class="overlay">
+                                <h2>CANSER DISEASE</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>In the field of health, EDA project work has been done to examine the Canser disease and make analyzes and predictions according to whether the cell is cancer or not according to the structure of the cells.</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_03_DAILY_STOCK_PRICES_DEMAND_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_DAILY_STOCK.jpg" alt="EDA Image 6">
+                            <div class="overlay">
+                                <h2>DAILY STOCK RETURN</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>In the field of finance, EDA project work has been done to analyze and predict the daily stock prices and daily stock returns of 4 companies.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/fatmanurazman/" target="_blank">
+                <img src="images/social_linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.kaggle.com/fnurazman" target="_blank">
+                <img src="images/social_kaggle.svg" alt="Kaggle">
+            </a>
+            <a href="https://public.tableau.com/app/profile/fatma.nur.azman/vizzes" target="_blank">
+                <img src="images/social_tableau.svg" alt="Tableau">
+            </a>
+            <a href="https://github.com/Fatma-Nur-Azman" target="_blank">
+                <img src="images/social_github.png" alt="GitHub">
+            </
