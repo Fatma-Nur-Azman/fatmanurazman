@@ -12,44 +12,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        .name-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .name-container span {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        .name-container img {
-            margin: 0 10px;
-            max-width: 50px;
-            height: auto;
-        }
-        .button.circled {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #e44c65;
-            text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .button.circled img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         .social-icons {
             display: flex;
             justify-content: center;
@@ -64,19 +26,24 @@
             height: 40px;
         }
         .section {
-            padding: 20px 0;
+            padding: 20px;
             max-width: 800px;
-            margin: 0 auto; /* Ortalamak için */
+            margin: 20px auto;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 20px;
+            color: #333;
         }
         .section p, .section ul {
             text-align: justify;
-            line-height: 1.5;
+            line-height: 1.6;
             font-size: 1em;
+            color: #666;
             margin: 10px 0;
         }
         .section ul {
@@ -84,11 +51,31 @@
             padding: 0;
         }
         .section ul li {
-            padding: 5px 0;
+            padding: 10px 0;
         }
         .section h3 {
-            font-size: 1.2em;
+            font-size: 1.4em;
             margin: 10px 0;
+            color: #444;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .buttons a {
+            isplay: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            color: rgb(129, 126, 126);
+            text-decoration: none; /* Corrected from 'Opera 3' to 'none' */
+            border-radius: 5px; /* Corrected from '5 px' to '5px' */
+            transition: box-shadow 0.5s, border 0.5s;
+            font-weight: bold; /* Added this line to make the text bold */
+        }
+        .buttons a:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+            border: 2px solid #c4b4cc; /* Added border effect */
         }
     </style>
 </head>
@@ -114,6 +101,7 @@
                         <ul>
                             <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li>
                             <li><a href="ml.html">Machine Learning</a></li>
+                            <li><a href="dp.html">Deep Learning</a></li>
                             <li><a href="Data_Visualization.html">Data Visualization</a></li>
                             <li><a href="Advanced_Notebooks.html">Advanced Notebooks</a></li>
                         </ul>
@@ -128,57 +116,64 @@
         <!-- Main Content -->
         <section id="main">
             <div class="inner">
-                <header>
-                   
-                </header>
+                <!-- Buttons for Navigation -->
+                <div class="buttons">
+                    <a href="#story">My Story</a>
+                    <a href="#work">Work Experience</a>
+                    <a href="#education">Education</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#skills">Technical Skills</a>
+                </div>
 
                 <!-- Summary Section -->
-                <div class="section">
-                    <h2>MY STORY</h2>
+                <div id="story" class="section">
+                    <h2>My Story</h2>
                     <p>
-                        As a student specializing in Data Science and Machine Learning, 
-                        I work hard to develop my skills and gain practical experience 
-                        through various projects. I have a special interest in statistical 
-                        modeling, natural language processing (NLP), and data visualization. 
-                        Thanks to my commitment to continuous learning, I closely follow the
-                        latest developments in data science and aim to stay up-to-date in this
-                         rapidly changing field. My goal is to build a successful career in 
-                         data science and 
-                        contribute to innovative solutions and impactful projects.
+                        Aspiring Data Analyst with over 3 years of experience in data visualization and project management. 
+                        I have improved project completion rates by 20% and reduced delays by 15% at Baybura Möble. 
+                        Skilled in transforming data into actionable insights using tools like PostgreSQL, Microsoft Dynamics AX, 
+                        and Power BI. My goal is to build a successful career in data science and contribute to innovative solutions 
+                        and impactful projects.
                     </p>
                 </div>
 
                 <!-- Work Experience Section -->
-                <div class="section">
-                    <h2>WORK EXPERIENCE</h2>
+                <div id="work" class="section">
+                    <h2>Work Experience</h2>
                     <ul>
                         <li>
                             <h3>NOVA Reklamcılık Dekorasyon A.Ş</h3>
-                            <p>Cost Analyst | 2023</p>
+                            <p>Cost Analyst | March 2023 - September 2023</p>
                             <p>
-                                - I conducted BOQ analysis, drawing editing, and material research for projects, optimizing production processes and managing project costs efficiently. Additionally, I collaborated with project management teams to review and edit project data, ensuring the successful execution of accepted projects.
+                                - Managed and improved financial data, leading to a 20% enhancement in forecast accuracy.<br>
+                                - Executed trend analysis and benchmark reports, achieving a 20% improvement in prediction accuracy.<br>
+                                - Generated and delivered cost reports to stakeholders, boosting reporting efficiency by 25%.<br>
+                                - Developed strategic recommendations for revenue growth, contributing to a 12% rise in revenue.
                             </p>
                         </li>
                         <li>
                             <h3>Baybura Möbl</h3>
-                            <p>Project Manager | Interior Architect | 2020 - 2022</p>
+                            <p>Project Manager | Interior Architect | May 2020 - December 2022</p>
                             <p>
-                                - I effectively managed customer relations and project processes, ensuring client requirements were met and projects were successfully executed. Additionally, I conducted site analysis, transforming spatial analyses into design projects, and utilized 3D modeling for visualizations and detailed furniture drawings.
+                                - Supervised multiple projects, prioritizing tasks by urgency and resources, resulting in a 20% boost in project completion rate.<br>
+                                - Collaborated with cross-functional teams to resolve issues and mitigate risks, reducing project delays by 15%.<br>
+                                - Presented detailed project status updates to stakeholders and executive management, improving communication efficiency by 30%.
                             </p>
                         </li>
                         <li>
                             <h3>MMA (Mustafa Mermer Architecture)</h3>
                             <p>Project Manager | Interior Architect | 2017 - 2019</p>
                             <p>
-                                - I conducted customer needs analysis and translated them into design projects, ensuring alignment with client expectations. Additionally, I effectively managed project teams and workflows, facilitating seamless project execution.
+                                - Conducted customer needs analysis and translated them into design projects, ensuring alignment with client expectations.<br>
+                                - Effectively managed project teams and workflows, facilitating seamless project execution.
                             </p>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Education Section -->
-                <div class="section">
-                    <h2>EDUCATION</h2>
+                <div id="education" class="section">
+                    <h2>Education</h2>
                     <ul>
                         <li>
                             <h3>Kocaeli University</h3>
@@ -190,42 +185,53 @@
                     </ul>
                 </div>
 
-                <!-- Courses Section -->
-                <div class="section">
-                    <h2>COURSES</h2>
+                <!-- Certifications Section -->
+                <div id="certifications" class="section">
+                    <h2>Certifications</h2>
                     <ul>
                         <li>
-                            <h3>Techproeducation</h3>
-                            <p>Data Science | 2024</p>
+                            <h3>Techproeducation Data Scientist Professional Certificate</h3>
+                            <p>Online | 280 hours | 2024</p>
                             <p>
-                                - This comprehensive program has enhanced my expertise in advanced data science methodologies and tools, including programming languages such as Python, SQL, machine learning algorithms, data visualization techniques, and big data technologies. This program solidifies my ability to analyze complex datasets, derive actionable insights, and effectively communicate findings to stakeholders.
+                                - This comprehensive program has enhanced my expertise in advanced data science methodologies and tools, including programming languages such as Python, SQL, machine learning algorithms, data visualization techniques, and big data technologies.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Google Data Analytics Professional Certificate</h3>
+                            <p>Google | 192 hours | Coursera | 2024</p>
+                            <p>
+                                - Completed 8-course series of training, covering data cleaning, visualization, and analysis with SQL and an introduction to R programming.
                             </p>
                         </li>
                         <li>
                             <h3>Business Analysis Specialist Certificate Program</h3>
-                            <p>Business Analysis | 2023</p>
+                            <p>Istanbul Technical University | 60 hours | 2023</p>
                             <p>
-                                - I gained a comprehensive understanding of the business analysis lifecycle and the entire SDLC, including planning, analysis, design, implementation, testing, deployment, and maintenance.
+                                - Gained a comprehensive understanding of the business analysis lifecycle and the entire SDLC, including planning, analysis, design, implementation, testing, deployment, and maintenance.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Managing Emotions in Times of Uncertainty & Stress</h3>
+                            <p> Yale University | 9 hours | Coursera | 2024</p>
+                            <p>
+                                - Focused on managing emotions and stress in uncertain times, enhancing my ability to maintain performance under pressure.
                             </p>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Technical Skills Section -->
-                <div class="section">
-                    <h2>TECHNICAL SKILLS</h2>
+                <div id="skills" class="section">
+                    <h2>Technical Skills</h2>
                     <ul>
                         <li><u>Programming Languages:</u> Python, SQL, HTML, Photoshop</li>
                         <li><u>Frameworks and Libraries:</u> Numpy, Pandas, Matplotlib, Seaborn, Plotly, Folium, Bokeh</li>
                         <li><u>Databases and Cloud Hosting:</u> PostgreSQL, DBeaver, Kaggle, Notion</li>
-                        <li><u>Software and Tools:</u>  Tableau, Power BI, Jupyter, VsCode, GitHub Desktop, Jira Software, Microsoft Dynamics AX, Figma, Canva, Google Sheets</li>
+                        <li><u>Software and Tools:</u> Tableau, Power BI, Jupyter, VsCode, GitHub Desktop, Jira Software, Microsoft Dynamics AX, Figma, Canva, Google Sheets</li>
                     </ul>
                 </div>
             </div>
         </section>
-       
-
-
        
 
         <!-- Social Media Icons -->

@@ -12,44 +12,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        .name-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .name-container span {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        .name-container img {
-            margin: 0 10px;
-            max-width: 50px;
-            height: auto;
-        }
-        .button.circled {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #e44c65;
-            text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .button.circled img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        
         .social-icons {
             display: flex;
             justify-content: center;
@@ -87,7 +50,6 @@
             transition: opacity 0.3s ease;
         }
         .gallery a:hover img {
-            color: black;
             opacity: 0.3;
         }
         .gallery .overlay {
@@ -101,8 +63,9 @@
             align-items: center;
             justify-content: center;
             opacity: 0;
+            background-color: rgba(78, 69, 83, 0.7); /* Added background color */
+            color: white; /* Changed text color to white */
             transition: opacity 0.3s ease;
-            color: rgb(36, 35, 35);
             text-align: center;
             padding: 20px;
             border-radius: 10px;
@@ -118,6 +81,42 @@
         .inner header {
             text-align: center;
         }
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .filter-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            color: rgb(129, 126, 126);
+            text-decoration: none; /* Corrected from 'Opera 3' to 'none' */
+            border-radius: 5px; /* Corrected from '5 px' to '5px' */
+            transition: box-shadow 0.5s, border 0.5s;
+            font-weight: bold; /* Added this line to make the text bold */
+        }
+        .filter-buttons a:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+            border: 2px solid #c4b4cc; /* Added border effect */
+        }
+
+        .description {
+            font-size: 1.2em; /* Font size reduced */
+            font-style: italic; /* Italicized text */
+            color: #555; /* Changed text color to a lighter shade */
+            line-height: 1.5em; /* Increased line height for readability */
+            margin: 20px 10%; /* Added margin for left and right */
+            text-align: center; /* Center aligned text */
+        }
+
     </style>
 </head>
 <body class="is-preload">
@@ -132,34 +131,46 @@
                     <p>Data Scientist & Data Analyst & Business Analyst</p>
                 </header>
             </div>
- <!-- Nav -->
- <nav id="nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="#">Portfolio</a>
-            <ul>
-                <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li> <!-- Bu satır düzeltildi -->
-                <li><a href="#">Machine Learning</a></li>
-                <li><a href="Data_Visualization.html">Data Visualization</a></li>
-                <li><a href="Advanced_Notebooks.html">Advanced Notebooks</a></li>
-            </ul>
-        </li>
-        <li><a href="https://medium.com/@azmanfnur" target="_blank">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mailto:azmanfnur@gmail.com">Contact</a></li>
-    </ul>
-</nav>
 
-</div>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                        <ul>
+                            <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li>
+                            <li><a href="ml.html">Machine Learning</a></li>
+                            <li><a href="dp.html">Deep Learning</a></li>
+                            <li><a href="Data_Visualization.html">Data Visualization</a></li>
+                            <li><a href="Advanced_Notebooks.html">Advanced Notebooks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://medium.com/@azmanfnur" target="_blank">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mailto:azmanfnur@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <a href="eda.html">Exploratory Data Analysis (EDA)</a>
+            <a href="ml.html">Machine Learning</a>
+            <a href="dp.html">Deep Learning</a>
+            <a href="Data_Visualization.html">Data Visualization</a>
+            <a href="Advanced_Notebooks.html">Advanced Notebooks</a>
+        </div>
 
 
-        <!-- Main Content -->
-        <section id="main">
+          <!-- Main Content -->
+          <section id="main">
             <div class="inner">
                 <header>
-                    <h3>A glimpse of the projects I've been working on</h3>
+                    <p class="description"> Exploratory Data Analysis is like searching for a pearl within an oyster. Just as a diver must carefully open many oysters to find the hidden pearls, a data analyst must sift through vast amounts of raw data to uncover valuable insights. Each data point is like a grain of sand, seemingly insignificant on its own, but when examined through the lens of EDA, patterns and relationships begin to emerge. Through this process, the analyst polishes and refines the data, transforming it into clear and actionable insights, much like how a pearl is revealed from within the rough exterior of an oyster.</p>
                 </header>
+                
+
                 <div class="gallery-container">
                     <div class="gallery">
                         <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_01_B%C4%B0KE_DEMAND_ANALYSIS" target="_blank">

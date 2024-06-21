@@ -12,44 +12,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        .name-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .name-container span {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        .name-container img {
-            margin: 0 10px;
-            max-width: 50px;
-            height: auto;
-        }
-        .button.circled {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #e44c65;
-            text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .button.circled img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         .social-icons {
             display: flex;
             justify-content: center;
@@ -101,8 +63,9 @@
             align-items: center;
             justify-content: center;
             opacity: 0;
+            background-color: rgba(78, 69, 83, 0.7); /* Added background color */
+            color: white; /* Changed text color to white */
             transition: opacity 0.3s ease;
-            color: rgb(36, 35, 35);
             text-align: center;
             padding: 20px;
             border-radius: 10px;
@@ -117,6 +80,40 @@
         }
         .inner header {
             text-align: center;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .filter-buttons {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.filter-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: rgb(129, 126, 126);
+    text-decoration: none; /* Corrected from 'Opera 3' to 'none' */
+    border-radius: 5px; /* Corrected from '5 px' to '5px' */
+    transition: box-shadow 0.5s, border 0.5s;
+    font-weight: bold; /* Added this line to make the text bold */
+}
+.filter-buttons a:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+    border: 2px solid #c4b4cc; /* Added border effect */
+}
+.description {
+            font-size: 1.2em; /* Font size reduced */
+            font-style: italic; /* Italicized text */
+            color: #555; /* Changed text color to a lighter shade */
+            line-height: 1.5em; /* Increased line height for readability */
+            margin: 20px 10%; /* Added margin for left and right */
+            text-align: center; /* Center aligned text */
         }
     </style>
 </head>
@@ -142,6 +139,7 @@
                         <ul>
                             <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li>
                             <li><a href="ml.html">Machine Learning</a></li>
+                            <li><a href="dp.html">Deep Learning</a></li>
                             <li><a href="Data_Visualization.html">Data Visualization</a></li>
                             <li><a href="Advanced_Notebooks.html">Advanced Notebooks</a></li>
                         </ul>
@@ -153,12 +151,47 @@
             </nav>
         </div>
 
-        <!-- Main Content -->
-        <section id="main">
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <a href="eda.html">Exploratory Data Analysis (EDA)</a>
+            <a href="ml.html">Machine Learning</a>
+            <a href="dp.html">Deep Learning</a>
+            <a href="Data_Visualization.html">Data Visualization</a>
+            <a href="Advanced_Notebooks.html">Advanced Notebooks</a>
+        </div>
+
+         <!-- Main Content -->
+         <section id="main">
             <div class="inner">
                 <header>
-                    <h3>A glimpse of the projects I've been working on</h3>
+                    <p class="description">Data visualization is like a telescope for data. Just as astronomers use telescopes to observe and understand the universe, data scientists use visualizations to explore and comprehend complex datasets. Each chart, graph, and infographic acts as a lens, bringing hidden patterns and insights into focus. Through this lens, we can navigate the vast expanse of data, discovering new knowledge and making informed decisions.</p>
                 </header>
+
+                <!-- Power BI Projects -->
+                <div class="section-title">Power BI Projects</div>
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_03_POWER_BI_GLOBAL_SUPERSTOR" target="_blank">
+                            <img src="projects/Global_superstore.png" alt="GLOBAL_SUPERSTORE">
+                            <div class="overlay">
+                                <h2>GLOBAL SUPERSTORE SALES ANALYSIS</h2>
+                                <p>POWER BI_PROJECT | 2024</p>
+                                <p>In this project, I used Power BI to analyze Global Superstore's sales data. The analysis covers product performance, customer behavior, regional sales, and sales trends.</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_01_POWER_BI_01_COVID-19" target="_blank">
+                            <img src="projects/DataViz_COVID-19.jpg" alt="COVID-19">
+                            <div class="overlay">
+                                <h2>COVID-19</h2>
+                                <p>POWER BI PROJECT | 2023</p>
+                                <p> This dataset was used for the analysis and visualization of the COVID-19 pandemic with Power BI. The data includes daily COVID-19 cases, deaths and recoveries in various countries and regions.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tableau Projects -->
+                <div class="section-title">Tableau Projects</div>
                 <div class="gallery-container">
                     <div class="gallery">
                         <a href="https://public.tableau.com/app/profile/fatma.nur.azman/viz/WASHINGTONHOUSESALESWILLYOUSEETHETRUTH/WASHINGTONHOUSESALESWILLYOUSEETHETRUTH" target="_blank">
@@ -168,25 +201,6 @@
                                 <p>Washington House Sales: You'll find yourself excavating like an archaeologist, delving deep to unearth the truth. Can you discern the realities beneath these data?</p>
                             </div>
                         </a>
-
-
-
-
-                        <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_03_POWER_BI_GLOBAL_SUPERSTOR" target="_blank">
-                            <img src="projects/Global_superstore.png" alt="GLOBAL_SUPERSTORE">
-                            <div class="overlay">
-                                <h2>GLOBAL SUPERSTORE SALES ANALYSIS</h2>
-                                <p>POWER BI_PROJECT | 2024</p>
-                                <p>In this project, I used Power BI to analyze Global Superstore's sales data. The analysis covers product performance, customer behavior, regional sales, and sales trends.</p>
-                            </div>
-                        </a>
-
-
-
-
-                         <!-- Diğer projeler burada eklenecek -->
-
-
                         <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_02_TABLEAU_ROTTEN_TOMATOES_MOVIES" target="_blank">
                             <img src="projects/DataViz_ROTTEN_TOMATOES.jpg" alt="ROTTEN_TOMATOES">
                             <div class="overlay">
@@ -195,22 +209,9 @@
                                 <p>It includes analysis and visualizations on Rotten Tomatoes movie dataset using Tableau. It is aimed to analyze various metrics in the film industry and examine which factors affect film scores.</p>
                             </div>
                         </a>
-
-                        
-                        <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_01_POWER_BI_01_COVID-19" target="_blank">
-                            <img src="projects/DataViz_COVID-19.jpg" alt="COVID-19">
-                            <div class="overlay">
-                                <h2>COVID-19</h2>
-                                <p>POWER BI PROJECT | 2023</p>
-                                <p> This dataset was used for the analysis and visualization of the COVID-19 pandemic with Power BI. The data includes daily COVID-19 cases, deaths and recoveries in various countries and regions.</p>
-                            </div>
-                        </a>
-
-
-
-                        <!-- Diğer projeler burada eklenecek -->
                     </div>
                 </div>
+
             </div>
         </section>
 
