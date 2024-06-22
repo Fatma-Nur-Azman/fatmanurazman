@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Helios by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     <title>Data Visualization - Fatma Nur Azman</title>
@@ -49,7 +44,6 @@
             transition: opacity 0.3s ease;
         }
         .gallery a:hover img {
-            color: black;
             opacity: 0.3;
         }
         .gallery .overlay {
@@ -63,8 +57,8 @@
             align-items: center;
             justify-content: center;
             opacity: 0;
-            background-color: rgba(78, 69, 83, 0.7); /* Added background color */
-            color: white; /* Changed text color to white */
+            background-color: rgba(78, 69, 83, 0.7);
+            color: white;
             transition: opacity 0.3s ease;
             text-align: center;
             padding: 20px;
@@ -89,33 +83,94 @@
             font-weight: bold;
         }
         .filter-buttons {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-.filter-buttons a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    color: rgb(129, 126, 126);
-    text-decoration: none; /* Corrected from 'Opera 3' to 'none' */
-    border-radius: 5px; /* Corrected from '5 px' to '5px' */
-    transition: box-shadow 0.5s, border 0.5s;
-    font-weight: bold; /* Added this line to make the text bold */
-}
-.filter-buttons a:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
-    border: 2px solid #c4b4cc; /* Added border effect */
-}
-.description {
-            font-size: 1.2em; /* Font size reduced */
-            font-style: italic; /* Italicized text */
-            color: #555; /* Changed text color to a lighter shade */
-            line-height: 1.5em; /* Increased line height for readability */
-            margin: 20px 10%; /* Added margin for left and right */
-            text-align: center; /* Center aligned text */
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
         }
+        .filter-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            color: rgb(129, 126, 126);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: box-shadow 0.5s, border 0.5s;
+            font-weight: bold;
+        }
+        .filter-buttons a:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #c4b4cc;
+        }
+        .description {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #555;
+            line-height: 1.5em;
+            margin: 20px 10%;
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .image-gallery {
+    display: block; /* Değiştirildi */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.image-gallery img {
+    width: 100%; /* Tam genişlik */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Resimler arası boşluk */
+}
     </style>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
@@ -160,8 +215,8 @@
             <a href="Advanced_Notebooks.html">Advanced Notebooks</a>
         </div>
 
-         <!-- Main Content -->
-         <section id="main">
+        <!-- Main Content -->
+        <section id="main">
             <div class="inner">
                 <header>
                     <p class="description">Data visualization is like a telescope for data. Just as astronomers use telescopes to observe and understand the universe, data scientists use visualizations to explore and comprehend complex datasets. Each chart, graph, and infographic acts as a lens, bringing hidden patterns and insights into focus. Through this lens, we can navigate the vast expanse of data, discovering new knowledge and making informed decisions.</p>
@@ -171,7 +226,7 @@
                 <div class="section-title">Power BI Projects</div>
                 <div class="gallery-container">
                     <div class="gallery">
-                        <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_03_POWER_BI_GLOBAL_SUPERSTOR" target="_blank">
+                        <a href="javascript:void(0)" onclick="openModal('globalSuperstore')">
                             <img src="projects/Global_superstore.png" alt="GLOBAL_SUPERSTORE">
                             <div class="overlay">
                                 <h2>GLOBAL SUPERSTORE SALES ANALYSIS</h2>
@@ -179,6 +234,51 @@
                                 <p>In this project, I used Power BI to analyze Global Superstore's sales data. The analysis covers product performance, customer behavior, regional sales, and sales trends.</p>
                             </div>
                         </a>
+                        
+                        <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_01_POWER_BI_01_COVID-19" target="_blank">
+                            <img src="projects/DataViz_COVID-19.jpg" alt="COVID-19">
+                            <div class="overlay">
+                                <h2>COVID-19</h2>
+                                <p>POWER BI PROJECT | 2023</p>
+                                <p>This dataset was used for the analysis and visualization of the COVID-19 pandemic with Power BI. The data includes daily COVID-19 cases, deaths and recoveries in various countries and regions.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modal for Global Superstore -->
+<div id="globalSuperstore" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('globalSuperstore')">&times;</span>
+        <h2>GLOBAL SUPERSTORE SALES ANALYSIS</h2>
+        <p>POWER BI_PROJECT | 2024</p>
+        <p><u>Describe:</u> Global Superstore is a retail company, and our dataset
+            includes information on its sales. The data encompasses
+            product categories, customer segments,regions, countries, and
+            more. The aim is to analyze this data to understand the
+            company's performance and identify potential improvement
+            opportunities.</p>
+        <p><u>Analysis Sections:</u> </p>
+        <p>Product-Based Analysis: Evaluates the sales and profitability of different product categories.</p>
+        <p>Customer Insights: Analyzes customer segments to identify high-value customers and underperforming segments.</p>
+        <p>Regional Performance: Assesses sales performance across different regions.</p>
+        <p>Trend Analysis: Examines sales trends over time to highlight seasonal patterns.</p>
+
+        <p><u>GitHub Repo:</u> <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_03_POWER_BI_GLOBAL_SUPERSTOR" target="_blank">Global Superstore Sales Analysis</a></p>
+        <p><u>Youtube Report Video:</u> <a href="https://www.youtube.com/watch?v=qG7xQ4hZHmU&t=11s" target="_blank">Global Superstore Sales Analysis Video</a></p>
+
+        <div class="image-gallery">
+            <img src="projects/Power BI/01_1_Overview.jpg" alt="Overview">
+            <img src="projects/Power BI/01_2_Product_Based_Analysis.jpg" alt="Product Based Analysis">
+            <img src="projects/Power BI/01_3_Customer_Based_Analysis.jpg" alt="Customer Based Analysis">
+            <img src="projects/Power BI/01_4_Region_Based_Analysis.jpg" alt="Region Based Analysis">
+            <img src="projects/Power BI/01_5_Trend_Based_Analysis.jpg" alt="Trend Based Analysis">
+            <img src="projects/Power BI/01_6_Thank_You.jpg" alt="Thank You">
+        </div>
+    </div>
+</div>    
+               
+                <div id="globalSuperstore" class="modal">
                         <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_01_POWER_BI_01_COVID-19" target="_blank">
                             <img src="projects/DataViz_COVID-19.jpg" alt="COVID-19">
                             <div class="overlay">
@@ -201,6 +301,7 @@
                                 <p>Washington House Sales: You'll find yourself excavating like an archaeologist, delving deep to unearth the truth. Can you discern the realities beneath these data?</p>
                             </div>
                         </a>
+
                         <a href="https://github.com/Fatma-Nur-Azman/DATAVIZ__Projects-/tree/main/DATAVIZ_02_TABLEAU_ROTTEN_TOMATOES_MOVIES" target="_blank">
                             <img src="projects/DataViz_ROTTEN_TOMATOES.jpg" alt="ROTTEN_TOMATOES">
                             <div class="overlay">
