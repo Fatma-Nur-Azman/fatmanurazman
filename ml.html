@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+    Helios by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>EDA - Fatma Nur Azman</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .gallery a {
+            position: relative;
+            display: block;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: opacity 0.3s ease;
+        }
+        .gallery a:hover img {
+            opacity: 0.3;
+        }
+        .gallery .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            background-color: rgba(78, 69, 83, 0.7); /* Added background color */
+            color: white; /* Changed text color to white */
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .gallery a:hover .overlay {
+            opacity: 1;
+        }
+        .gallery .overlay h2,
+        .gallery .overlay p {
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .inner header {
+            text-align: center;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .filter-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            color: rgb(129, 126, 126);
+            text-decoration: none; /* Corrected from 'Opera 3' to 'none' */
+            border-radius: 5px; /* Corrected from '5 px' to '5px' */
+            transition: box-shadow 0.5s, border 0.5s;
+            font-weight: bold; /* Added this line to make the text bold */
+        }
+        .filter-buttons a:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+            border: 2px solid #c4b4cc; /* Added border effect */
+        }
+
+        .description {
+            font-size: 1.2em; /* Font size reduced */
+            font-style: italic; /* Italicized text */
+            color: #555; /* Changed text color to a lighter shade */
+            line-height: 1.5em; /* Increased line height for readability */
+            margin: 20px 10%; /* Added margin for left and right */
+            text-align: center; /* Center aligned text */
+        }
+
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header">
+            <div class="inner">
+                <header>
+                    <h1><a href="index.html" id="logo">Fatma Nur Azman</a></h1>
+                    <hr />
+                    <p>Data Scientist & Data Analyst & Business Analyst</p>
+                </header>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                        <ul>
+                            <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li>
+                            <li><a href="ml.html">Machine Learning</a></li>
+                            <li><a href="dp.html">Deep Learning</a></li>
+                            <li><a href="Data_Visualization.html">Data Visualization</a></li>
+                            <li><a href="Advanced_Notebooks.html">Advanced Notebooks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://medium.com/@azmanfnur" target="_blank">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mailto:azmanfnur@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <a href="eda.html">Exploratory Data Analysis (EDA)</a>
+            <a href="ml.html">Machine Learning</a>
+            <a href="dp.html">Deep Learning</a>
+            <a href="Data_Visualization.html">Data Visualization</a>
+            <a href="Advanced_Notebooks.html">Advanced Notebooks</a>
+        </div>
+
+
+          <!-- Main Content -->
+          <section id="main">
+            <div class="inner">
+                <header>
+                    <p class="description"> Exploratory Data Analysis is like searching for a pearl within an oyster. Just as a diver must carefully open many oysters to find the hidden pearls, a data analyst must sift through vast amounts of raw data to uncover valuable insights. Each data point is like a grain of sand, seemingly insignificant on its own, but when examined through the lens of EDA, patterns and relationships begin to emerge. Through this process, the analyst polishes and refines the data, transforming it into clear and actionable insights, much like how a pearl is revealed from within the rough exterior of an oyster.</p>
+                </header>
+                
+
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <a href="https://github.com/Fatma-Nur-Azman/EDA_Projects/tree/main/EDA_01_B%C4%B0KE_DEMAND_ANALYSIS" target="_blank">
+                            <img src="projects/EDA_DS4_BİKE_DEMAND.jpeg" alt="EDA Image 1">
+                            <div class="overlay">
+                                <h2>BİKE DEMAND ANALYSIS</h2>
+                                <p>EDA_PROJECT | 2023</p>
+                                <p>This project study was carried out to analyze the demand for bicycle rental and to make demand forecasts.</p>
+                            </div>
+                        </a>
+                        
+                        
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/fatmanurazman/" target="_blank">
+                <img src="images/social_linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.kaggle.com/fnurazman" target="_blank">
+                <img src="images/social_kaggle.svg" alt="Kaggle">
+            </a>
+            <a href="https://public.tableau.com/app/profile/fatma.nur.azman/vizzes" target="_blank">
+                <img src="images/social_tableau.svg" alt="Tableau">
+            </a>
+            <a href="https://github.com/Fatma-Nur-Azman" target="_blank">
+                <img src="images/social_github.png" alt="GitHub">
+            </
